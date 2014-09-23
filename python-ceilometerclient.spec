@@ -1,12 +1,14 @@
 Name:             python-ceilometerclient
-Version:          1.0.10
-Release:          2%{?dist}
+Version:          1.0.11
+Release:          1%{?dist}
 Summary:          Python API and CLI for OpenStack Ceilometer
 
 Group:            Development/Languages
 License:          ASL 2.0
 URL:              https://github.com/openstack/%{name}
 Source0:          https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
+
+Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
 
 BuildArch:        noarch
 BuildRequires:    python-setuptools
@@ -19,12 +21,8 @@ Requires:         python-argparse
 Requires:         python-prettytable
 Requires:         python-iso8601
 Requires:         python-keystoneclient
-Requires:         python-six >= 1.4.1
-
-#
-# patches_base=1.0.10
-#
-Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
+Requires:         python-six >= 1.7.0
+Requires:         python-stevedore
 
 %description
 This is a client library for Ceilometer built on the Ceilometer API. It
@@ -83,6 +81,10 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Tue Sep 23 2014 Jakub Ruzicka <jruzicka@redhat.com> 1.0.11-1
+- Update to upstream 1.0.11
+- New Requires: python-stevedore
+
 * Sat Jun 07 2014 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.10-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_21_Mass_Rebuild
 
