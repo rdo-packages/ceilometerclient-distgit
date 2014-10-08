@@ -1,5 +1,5 @@
 Name:             python-ceilometerclient
-Version:          1.0.11
+Version:          1.0.12
 Release:          1%{?dist}
 Summary:          Python API and CLI for OpenStack Ceilometer
 
@@ -20,6 +20,7 @@ Requires:         python-setuptools
 Requires:         python-argparse
 Requires:         python-prettytable
 Requires:         python-iso8601
+Requires:         python-oslo-utils
 Requires:         python-keystoneclient
 Requires:         python-six >= 1.7.0
 Requires:         python-stevedore
@@ -35,6 +36,7 @@ Summary:          Documentation for OpenStack Ceilometer API Client
 Group:            Documentation
 
 BuildRequires:    python-sphinx
+BuildRequires:    python-oslo-sphinx
 
 %description      doc
 This is a client library for Ceilometer built on the Ceilometer API. It
@@ -57,6 +59,8 @@ rm -rf python_ceilometerclient.egg-info
 
 # Let RPM handle the requirements
 rm -f {,test-}requirements.txt
+
+sed -i 's/oslosphinx/oslo.sphinx/' doc/source/conf.py
 
 %build
 %{__python} setup.py build
@@ -81,6 +85,12 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Wed Oct 08 2014 Jakub Ruzicka <jruzicka@redhat.com> 1.0.12-1
+- Update to upstream 1.0.12
+- New Requires: python-oslo-utils
+- New doc BuildRequires: python-oslo-utils
+- oslosphinx -> oslo.sphinx fix
+
 * Tue Sep 23 2014 Jakub Ruzicka <jruzicka@redhat.com> 1.0.11-1
 - Update to upstream 1.0.11
 - New Requires: python-stevedore
