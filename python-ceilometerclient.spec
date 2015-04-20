@@ -1,5 +1,5 @@
 Name:             python-ceilometerclient
-Version:          1.0.12
+Version:          1.0.13
 Release:          1%{?dist}
 Summary:          Python API and CLI for OpenStack Ceilometer
 
@@ -7,8 +7,6 @@ Group:            Development/Languages
 License:          ASL 2.0
 URL:              https://github.com/openstack/%{name}
 Source0:          https://pypi.python.org/packages/source/p/%{name}/%{name}-%{version}.tar.gz
-
-Patch0001: 0001-Remove-runtime-dependency-on-python-pbr.patch
 
 BuildArch:        noarch
 BuildRequires:    python-setuptools
@@ -20,10 +18,15 @@ Requires:         python-setuptools
 Requires:         python-argparse
 Requires:         python-prettytable
 Requires:         python-iso8601
-Requires:         python-oslo-utils
-Requires:         python-keystoneclient
+Requires:         python-oslo-i18n >= 1.3.0
+Requires:         python-oslo-serialization >= 1.2.0
+Requires:         python-oslo-utils >= 1.2.0
+Requires:         python-keystoneclient >= 1.1.0
 Requires:         python-six >= 1.7.0
-Requires:         python-stevedore
+Requires:         python-stevedore >= 1.1.0
+Requires:         python-requests >= 2.2.0
+Requires:         python-pbr
+
 
 %description
 This is a client library for Ceilometer built on the Ceilometer API. It
@@ -36,7 +39,7 @@ Summary:          Documentation for OpenStack Ceilometer API Client
 Group:            Documentation
 
 BuildRequires:    python-sphinx
-BuildRequires:    python-oslo-sphinx
+BuildRequires:    python-oslo-sphinx >= 2.5.0
 
 %description      doc
 This is a client library for Ceilometer built on the Ceilometer API. It
@@ -49,18 +52,8 @@ This package contains auto-generated documentation.
 %prep
 %setup -q
 
-%patch0001 -p1
-
-# We provide version like this in order to remove runtime dep on pbr.
-sed -i s/REDHATCEILOMETERCLIENTVERSION/%{version}/ ceilometerclient/__init__.py
-
-# Remove bundled egg-info
-rm -rf python_ceilometerclient.egg-info
-
 # Let RPM handle the requirements
 rm -f {,test-}requirements.txt
-
-sed -i 's/oslosphinx/oslo.sphinx/' doc/source/conf.py
 
 %build
 %{__python} setup.py build
@@ -75,16 +68,20 @@ sphinx-build -b html doc/source html
 rm -rf html/.doctrees html/.buildinfo
 
 %files
+%license LICENSE
 %doc README.rst
-%doc LICENSE
 %{_bindir}/ceilometer
 %{python_sitelib}/ceilometerclient
 %{python_sitelib}/*.egg-info
 
 %files doc
+%license LICENSE
 %doc html
 
 %changelog
+* Mon Apr 20 2015 Alan Pevec <alan.pevec@redhat.com> 1.0.13-1
+- Update to upstream 1.0.13
+
 * Wed Oct 08 2014 Jakub Ruzicka <jruzicka@redhat.com> 1.0.12-1
 - Update to upstream 1.0.12
 - New Requires: python-oslo-utils
