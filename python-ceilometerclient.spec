@@ -105,7 +105,7 @@ rm -rf html/.doctrees html/.buildinfo
 - Update to upstream 1.0.10
 - Remove requirements.txt in .spec instead of patch
 
-* Mon Feb 17 2014 Pádraig Brady <pbrady@redhat.com> - 1.0.9-3
+* Mon Feb 17 2014 Padraig Brady <pbrady@redhat.com> - 1.0.9-3
 - Require python-six >= 1.4.1 to ensure update
 
 * Mon Feb 17 2014 Alan Pevec <apevec@redhat.com> 1.0.9-1
