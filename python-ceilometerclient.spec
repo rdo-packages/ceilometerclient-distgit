@@ -1,6 +1,6 @@
 Name:             python-ceilometerclient
-Version:          1.0.13
-Release:          2%{?dist}
+Version:          1.5.0
+Release:          1%{?dist}
 Summary:          Python API and CLI for OpenStack Ceilometer
 
 Group:            Development/Languages
@@ -18,13 +18,13 @@ Requires:         python-setuptools
 Requires:         python-argparse
 Requires:         python-prettytable
 Requires:         python-iso8601
-Requires:         python-oslo-i18n >= 1.3.0
-Requires:         python-oslo-serialization >= 1.2.0
-Requires:         python-oslo-utils >= 1.2.0
-Requires:         python-keystoneclient >= 1.1.0
+Requires:         python-oslo-i18n >= 1.5.0
+Requires:         python-oslo-serialization >= 1.4.0
+Requires:         python-oslo-utils >= 2.0.0
+Requires:         python-keystoneclient >= 1.6.0
 Requires:         python-six >= 1.7.0
-Requires:         python-stevedore >= 1.1.0
-Requires:         python-requests >= 2.2.0
+Requires:         python-stevedore >= 1.5.0
+Requires:         python-requests >= 2.5.2
 Requires:         python-pbr
 
 
@@ -79,6 +79,9 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Thu Sep 17 2015 Haikel Guemar <hguemar@fedoraproject.org> 1.5.0-1
+- Update to upstream 1.5.0
+
 * Thu Jun 18 2015 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.0.13-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_23_Mass_Rebuild
 
