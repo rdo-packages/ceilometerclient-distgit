@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "5a682502_f5199823",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 29,
+      "author": {
+        "id": 108
+      },
+      "writtenOn": "2016-06-16T15:03:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a4c51b2_7c58d9fa",
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a4c51b2_1c6395b2",
         "filename": "python-ceilometerclient.spec",
         "patchSetId": 1
@@ -30,6 +48,30 @@
       "writtenOn": "2016-06-06T14:03:28Z",
       "side": 1,
       "message": "Just to be on the safe side: Versioning BuildRequires does not mean the runtime Requires will be versioned, so make sure to version it if it is needed at runtime as well as build time, because users won\u0027t be building the package.",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 28
+      },
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_951ca415",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 108
+      },
+      "writtenOn": "2016-06-16T15:03:26Z",
+      "side": 1,
+      "message": "yup, thanks",
+      "parentUuid": "3a4c51b2_1c6395b2",
       "range": {
         "startLine": 37,
         "startChar": 0,
@@ -59,6 +101,24 @@
     },
     {
       "key": {
+        "uuid": "5a682502_b51f2009",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 57,
+      "author": {
+        "id": 108
+      },
+      "writtenOn": "2016-06-16T15:03:26Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "3a4c51b2_5c5d1de9",
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a4c51b2_9c6e8595",
         "filename": "python-ceilometerclient.spec",
         "patchSetId": 1
@@ -70,6 +130,24 @@
       "writtenOn": "2016-06-06T14:03:28Z",
       "side": 1,
       "message": "If the binary executable works the same under Python 2 and Python 3, the guidelines advise to package only the Python 3 version (inside the Python 3 subpackage).\n\nRead the %install section of the Python RPM Porting Guide [0] for how to accomplish this in the %install section of the spec file, and then move this line to the Python 3 subpackage.\n\n[0] http://python-rpm-porting.readthedocs.io/en/latest/application-modules.html#install",
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5a682502_552b2c30",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 108
+      },
+      "writtenOn": "2016-06-16T15:03:26Z",
+      "side": 1,
+      "message": "As RDO is currently built for EL7 without py3, I\u0027d go with py2 executable as a default for now.",
+      "parentUuid": "3a4c51b2_9c6e8595",
       "revId": "7705af06b92d61904a115583635abc034a0f12e7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
