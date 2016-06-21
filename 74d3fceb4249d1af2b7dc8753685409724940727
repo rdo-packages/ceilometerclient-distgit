@@ -72,6 +72,30 @@
     },
     {
       "key": {
+        "uuid": "3afa9182_ec1c2b6d",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 113
+      },
+      "writtenOn": "2016-06-21T13:46:19Z",
+      "side": 1,
+      "message": "I understand this line is meant to prevent /usr/lib/python2.7/site-packages/ceilometerclient/tests from being present in the resulting RPM file.\n\nHowever, since there is nothing under /usr/lib/python2.7/tests (which is what the above line tries to remove), the resulting python2-ceilometerclient RPM includes ceilometerclient/tests.",
+      "parentUuid": "5aed85c8_ed3385f4",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 43
+      },
+      "revId": "74d3fceb4249d1af2b7dc8753685409724940727",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aed85c8_ed1c256d",
         "filename": "python-ceilometerclient.spec",
         "patchSetId": 2
