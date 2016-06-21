@@ -151,6 +151,24 @@
       "revId": "7705af06b92d61904a115583635abc034a0f12e7",
       "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aed85c8_ad405d36",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 117,
+      "author": {
+        "id": 193
+      },
+      "writtenOn": "2016-06-21T12:21:54Z",
+      "side": 1,
+      "message": "Fedora and EL7 are different. While of course EL7 uses Python 2, in Fedora the guidelines urge to install the Python 3 binary. We understand it\u0027s easier to make it the same in both, but we believe the if/else statements are better than not following the guidelines. Functionality beats simplicity here.\n\nWe want to get rid of Python 2 as much as possible in Fedora. Keeping it just because EL7 uses Python 2 is not a good reason.\n\nAlso, if you don\u0027t want to have many if/else statements, keep in mind that in Fedora dist-git, EPEL is in another branch and you can always keep those branches different.",
+      "parentUuid": "5a682502_552b2c30",
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
     }
   ]
 }
