@@ -48,6 +48,30 @@
     },
     {
       "key": {
+        "uuid": "5aed85c8_ed3385f4",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 116,
+      "author": {
+        "id": 193
+      },
+      "writtenOn": "2016-06-21T12:19:45Z",
+      "side": 1,
+      "message": "Could you expand on what do you mean?\n\nAs the tests are present I suggest to run them in a %check section of this spec file, or perhaps package them in two new subpackages named `pythonX-ceilometerclient-tests`",
+      "parentUuid": "5aed85c8_8d0f612e",
+      "range": {
+        "startLine": 116,
+        "startChar": 0,
+        "endLine": 116,
+        "endChar": 43
+      },
+      "revId": "74d3fceb4249d1af2b7dc8753685409724940727",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5aed85c8_ed1c256d",
         "filename": "python-ceilometerclient.spec",
         "patchSetId": 2
@@ -59,6 +83,30 @@
       "writtenOn": "2016-06-21T11:46:27Z",
       "side": 1,
       "message": "Doesn\u0027t this create a risk of adding unwanted bits to the package?",
+      "range": {
+        "startLine": 131,
+        "startChar": 0,
+        "endLine": 131,
+        "endChar": 20
+      },
+      "revId": "74d3fceb4249d1af2b7dc8753685409724940727",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "5aed85c8_4d2579aa",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 2
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 193
+      },
+      "writtenOn": "2016-06-21T12:19:45Z",
+      "side": 1,
+      "message": "I agree, it does, and it is generally frowned upon.\n\nI suggest something more specific, for example:\n\n    %{pythonX_sitelib}/%{srcname}\n    %{pythonX_sitelib}/%{srcname}-%{version}-py?.?.egg-info",
+      "parentUuid": "5aed85c8_ed1c256d",
       "range": {
         "startLine": 131,
         "startChar": 0,
