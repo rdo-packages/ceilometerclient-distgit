@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "9a245df4_4dbbad72",
+        "filename": "python-ceilometerclient.spec",
+        "patchSetId": 1
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 85
+      },
+      "writtenOn": "2016-07-13T12:37:37Z",
+      "side": 1,
+      "message": "In this case, PBR runtime dep is much less and available and stable API in all PBR releases (it\u0027s just pbr.version) so relaxed Requires: works\nwhile BR is hard dep expressed in setup.cfg",
+      "parentUuid": "5a682502_951ca415",
+      "range": {
+        "startLine": 37,
+        "startChar": 0,
+        "endLine": 37,
+        "endChar": 28
+      },
+      "revId": "7705af06b92d61904a115583635abc034a0f12e7",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "3a4c51b2_5c5d1de9",
         "filename": "python-ceilometerclient.spec",
         "patchSetId": 1
