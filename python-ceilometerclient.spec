@@ -1,6 +1,6 @@
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 Name:             python-ceilometerclient
-Version:          2.3.0
+Version:          2.4.0
 Release:          1%{?dist}
 Summary:          Python API and CLI for OpenStack Ceilometer
 
@@ -79,5 +79,8 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Mon Sep 12 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.4.0-1
+- Update to 2.4.0
+
 * Wed Mar 23 2016 RDO <rdo-list@redhat.com> 2.3.0-0.1
  -  Rebuild for Mitaka 
