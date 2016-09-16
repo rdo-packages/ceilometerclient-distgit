@@ -14,7 +14,7 @@ Summary:          %{sum}
 
 License:          ASL 2.0
 URL:              https://github.com/openstack/%{name}
-Source0:          http://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
+Source0:          https://tarballs.openstack.org/%{name}/%{name}-%{upstream_version}.tar.gz
 
 BuildArch:        noarch
 
