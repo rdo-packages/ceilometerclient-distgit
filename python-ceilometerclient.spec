@@ -8,7 +8,7 @@
 %global sum Python API and CLI for OpenStack Ceilometer
 
 Name:             python-ceilometerclient
-Version:          2.6.1
+Version:          2.6.2
 Release:          1%{?dist}
 Summary:          %{sum}
 
@@ -162,6 +162,9 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+* Thu Nov 03 2016 Alfredo Moralejo <amoralej@redhat.com> 2.6.2-1
+- Update to 2.6.2
+
 * Mon Sep 12 2016 Haikel Guemar <hguemar@fedoraproject.org> 2.6.1-1
 - Update to 2.6.1
 
