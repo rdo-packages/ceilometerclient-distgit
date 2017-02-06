@@ -39,14 +39,16 @@ provides a Python API (the ceilometerclient module) and a command-line tool
 Summary:          %{sum}
 # from requirements.txt
 Requires:         python-iso8601
-Requires:         python-oslo-i18n
-Requires:         python-oslo-serialization
-Requires:         python-oslo-utils
+Requires:         python-oslo-i18n >= 2.1.0
+Requires:         python-oslo-serialization >= 1.10.0
+Requires:         python-oslo-utils >= 3.17.0
 Requires:         python-keystoneclient
 Requires:         python-requests >= 2.5.2
 Requires:         python-six >= 1.9.0
 Requires:         python-stevedore
 Requires:         python-pbr
+Requires:         python-keystoneauth1 >= 2.1.0
+Requires:         python-prettytable
 %{?python_provide:%python_provide python2-%{sname}}
 
 %description -n python2-%{sname}
@@ -60,14 +62,16 @@ provides a Python API (the ceilometerclient module) and a command-line tool
 Summary:          %{sum}
 # from requirements.txt
 Requires:         python3-iso8601
-Requires:         python3-oslo-i18n
-Requires:         python3-oslo-serialization
-Requires:         python3-oslo-utils
+Requires:         python3-oslo-i18n >= 2.1.0
+Requires:         python3-oslo-serialization >= 1.10.0
+Requires:         python3-oslo-utils >= 3.17.0
 Requires:         python3-keystoneclient
 Requires:         python3-requests >= 2.5.2
 Requires:         python3-six >= 1.9.0
 Requires:         python3-stevedore
 Requires:         python3-pbr
+Requires:         python3-keystoneauth1 >= 2.1.0
+Requires:         python3-prettytable
 %{?python_provide:%python_provide python3-%{sname}}
 
 %description -n python3-%{sname}
