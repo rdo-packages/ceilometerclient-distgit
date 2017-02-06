@@ -166,3 +166,4 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/python-ceilometerclient/commit/?id=12c2f4515fcc6f9e364563ee89355b2d14fa0ff4
