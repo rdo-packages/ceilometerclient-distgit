@@ -18,6 +18,7 @@ Source0:          https://tarballs.openstack.org/%{name}/%{name}-%{upstream_vers
 
 BuildArch:        noarch
 
+BuildRequires:    git
 BuildRequires:    python-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    python-pbr >= 1.6
@@ -85,7 +86,7 @@ provides a Python API (the ceilometerclient module) and a command-line tool
 Summary:          Documentation for OpenStack Ceilometer API Client
 
 BuildRequires:    python-sphinx
-BuildRequires:    python-oslo-sphinx
+BuildRequires:    python-openstackdocstheme
 
 %description      doc
 This is a client library for Ceilometer built on the Ceilometer API. It
@@ -96,7 +97,7 @@ This package contains auto-generated documentation.
 
 
 %prep
-%setup -q -n %{name}-%{upstream_version}
+%autosetup -n %{name}-%{upstream_version} -S git
 
 # Remove bundled egg-info
 rm -rf python_%{sname}.egg-info
@@ -136,8 +137,7 @@ rm -fr %{buildroot}%{python3_sitelib}/%{sname}/tests
 %endif
 
 # Build HTML docs
-export PYTHONPATH="$( pwd ):$PYTHONPATH"
-sphinx-build -b html doc/source html
+%{__python2} setup.py build_sphinx -b html
 
 # Fix hidden-file-or-dir warnings
 rm -rf html/.doctrees html/.buildinfo
@@ -166,3 +166,4 @@ rm -rf html/.doctrees html/.buildinfo
 %doc html
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/python-ceilometerclient/commit/?id=dee72c601da8f3c001f2321f88b0563a3c9e513d
