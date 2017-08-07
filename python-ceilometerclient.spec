@@ -136,7 +136,6 @@ rm -fr %{buildroot}%{python3_sitelib}/%{sname}/tests
 %endif
 
 # Build HTML docs
-export PYTHONPATH="$( pwd ):$PYTHONPATH"
 sphinx-build -b html doc/source html
 
 # Fix hidden-file-or-dir warnings
