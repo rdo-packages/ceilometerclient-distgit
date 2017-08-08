@@ -21,12 +21,10 @@ BuildArch:        noarch
 BuildRequires:    python-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    python-pbr >= 1.6
-BuildRequires:    python-keystoneclient
 %if 0%{?with_python3}
 BuildRequires:    python3-devel
 BuildRequires:    python3-setuptools
 BuildRequires:    python3-pbr >= 1.6
-BuildRequires:    python3-keystoneclient
 %endif
 
 %description
@@ -42,8 +40,7 @@ Requires:         python-iso8601
 Requires:         python-oslo-i18n >= 2.1.0
 Requires:         python-oslo-serialization >= 1.10.0
 Requires:         python-oslo-utils >= 3.17.0
-Requires:         python-keystoneclient
-Requires:         python-requests >= 2.5.2
+Requires:         python-requests >= 2.8.1
 Requires:         python-six >= 1.9.0
 Requires:         python-stevedore
 Requires:         python-pbr
@@ -65,8 +62,7 @@ Requires:         python3-iso8601
 Requires:         python3-oslo-i18n >= 2.1.0
 Requires:         python3-oslo-serialization >= 1.10.0
 Requires:         python3-oslo-utils >= 3.17.0
-Requires:         python3-keystoneclient
-Requires:         python3-requests >= 2.5.2
+Requires:         python3-requests >= 2.8.1
 Requires:         python3-six >= 1.9.0
 Requires:         python3-stevedore
 Requires:         python3-pbr
