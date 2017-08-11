@@ -8,8 +8,8 @@
 %global sum Python API and CLI for OpenStack Ceilometer
 
 Name:             python-ceilometerclient
-Version:          XXX
-Release:          XXX
+Version:          2.9.0
+Release:          1%{?dist}
 Summary:          %{sum}
 
 License:          ASL 2.0
@@ -164,3 +164,6 @@ rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
 %doc doc/build/html
 
 %changelog
+* Fri Aug 11 2017 Alfredo Moralejo <amoralej@redhat.com> 2.9.0-1
+- Update to 2.9.0
+
