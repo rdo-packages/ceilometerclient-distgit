@@ -19,6 +19,7 @@ Source0:          https://tarballs.openstack.org/%{name}/%{name}-%{upstream_vers
 BuildArch:        noarch
 
 BuildRequires:    git
+BuildRequires:    openstack-macros
 BuildRequires:    python-setuptools
 BuildRequires:    python2-devel
 BuildRequires:    python-pbr >= 1.6
@@ -101,7 +102,7 @@ This package contains auto-generated documentation.
 rm -rf python_%{sname}.egg-info
 
 # Let RPM handle the requirements
-rm -f {,test-}requirements.txt
+%py_req_cleanup
 
 %build
 %py2_build
