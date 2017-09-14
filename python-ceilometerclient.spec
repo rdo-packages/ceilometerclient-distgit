@@ -110,6 +110,12 @@ rm -rf python_%{sname}.egg-info
 %py3_build
 %endif
 
+# Build HTML docs
+%{__python2} setup.py build_sphinx -b html
+
+# Fix hidden-file-or-dir warnings
+rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
+
 %install
 %{__python2} setup.py install -O1 --skip-build --root %{buildroot}
 
@@ -134,12 +140,6 @@ rm -fr %{buildroot}%{python2_sitelib}/%{sname}/tests
 %if 0%{?with_python3}
 rm -fr %{buildroot}%{python3_sitelib}/%{sname}/tests
 %endif
-
-# Build HTML docs
-%{__python2} setup.py build_sphinx -b html
-
-# Fix hidden-file-or-dir warnings
-rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
 
 %files -n python2-%{sname}
 %license LICENSE
