@@ -7,6 +7,11 @@
 %global sname ceilometerclient
 %global sum Python API and CLI for OpenStack Ceilometer
 
+%global common_desc \
+This is a client library for Ceilometer built on the Ceilometer API. It \
+provides a Python API (the ceilometerclient module) and a command-line tool \
+(ceilometer).
+
 Name:             python-ceilometerclient
 Version:          XXX
 Release:          XXX
@@ -30,10 +35,7 @@ BuildRequires:    python3-pbr >= 1.6
 %endif
 
 %description
-This is a client library for Ceilometer built on the Ceilometer API. It
-provides a Python API (the ceilometerclient module) and a command-line tool
-(ceilometer).
-
+%{common_desc}
 
 %package -n python2-%{sname}
 Summary:          %{sum}
@@ -51,10 +53,7 @@ Requires:         python-prettytable
 %{?python_provide:%python_provide python2-%{sname}}
 
 %description -n python2-%{sname}
-This is a client library for Ceilometer built on the Ceilometer API. It
-provides a Python API (the ceilometerclient module) and a command-line tool
-(ceilometer).
-
+%{common_desc}
 
 %if 0%{?with_python3}
 %package -n python3-%{sname}
@@ -73,9 +72,7 @@ Requires:         python3-prettytable
 %{?python_provide:%python_provide python3-%{sname}}
 
 %description -n python3-%{sname}
-This is a client library for Ceilometer built on the Ceilometer API. It
-provides a Python API (the ceilometerclient module) and a command-line tool
-(ceilometer).
+%{common_desc}
 %endif # with_python3
 
 
@@ -88,9 +85,7 @@ BuildRequires:    python-oslo-sphinx
 BuildRequires:    python-openstackdocstheme
 
 %description      doc
-This is a client library for Ceilometer built on the Ceilometer API. It
-provides a Python API (the ceilometerclient module) and a command-line tool
-(ceilometer).
+%{common_desc}
 
 This package contains auto-generated documentation.
 
