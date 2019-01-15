@@ -14,6 +14,8 @@
 %global sname ceilometerclient
 %global sum Python API and CLI for OpenStack Ceilometer
 
+%global with_doc 1
+
 %global common_desc \
 This is a client library for Ceilometer built on the Ceilometer API. It \
 provides a Python API (the ceilometerclient module) and a command-line tool \
@@ -61,6 +63,7 @@ Requires:         python%{pyver}-prettytable
 %description -n python%{pyver}-%{sname}
 %{common_desc}
 
+%if 0%{?with_doc}
 %package doc
 Summary:          Documentation for OpenStack Ceilometer API Client
 
@@ -71,6 +74,7 @@ BuildRequires:    python%{pyver}-openstackdocstheme
 
 %description      doc
 %{common_desc}
+%endif
 
 This package contains auto-generated documentation.
 
@@ -87,6 +91,7 @@ rm -rf python_%{sname}.egg-info
 %build
 %{pyver_build}
 
+%if 0%{?with_doc}
 %if %{pyver} == 3
 # 'execfile' is not available in python3
 sed -i 's/execfile(os.path.join("..", "ext", "gen_ref.py"))/exec(open(os.path.join("..", "ext", "gen_ref.py")).read())/' doc/source/conf.py
@@ -97,6 +102,7 @@ sed -i 's/execfile(os.path.join("..", "ext", "gen_ref.py"))/exec(open(os.path.jo
 
 # Fix hidden-file-or-dir warnings
 rm -rf doc/build/html/.doctrees doc/build/html/.buildinfo
+%endif
 
 %install
 %{pyver_install}
@@ -115,8 +121,10 @@ rm -fr %{buildroot}%{pyver_sitelib}/%{sname}/tests
 %{_bindir}/ceilometer
 %{_bindir}/ceilometer-%{pyver}
 
+%if 0%{?with_doc}
 %files doc
 %license LICENSE
 %doc doc/build/html
+%endif
 
 %changelog
