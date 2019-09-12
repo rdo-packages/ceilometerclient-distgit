@@ -68,8 +68,6 @@ Requires:         python%{pyver}-prettytable
 Summary:          Documentation for OpenStack Ceilometer API Client
 
 BuildRequires:    python%{pyver}-sphinx
-# FIXME: remove following line when a new release including https://review.openstack.org/#/c/476759/ is in u-u
-BuildRequires:    python%{pyver}-oslo-sphinx
 BuildRequires:    python%{pyver}-openstackdocstheme
 
 %description      doc
