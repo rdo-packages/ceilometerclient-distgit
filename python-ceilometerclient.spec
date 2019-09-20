@@ -22,8 +22,8 @@ provides a Python API (the ceilometerclient module) and a command-line tool \
 (ceilometer).
 
 Name:             python-ceilometerclient
-Version:          XXX
-Release:          XXX
+Version:          2.9.0
+Release:          1%{?dist}
 Summary:          %{sum}
 
 License:          ASL 2.0
@@ -128,3 +128,6 @@ rm -fr %{buildroot}%{pyver_sitelib}/%{sname}/tests
 %endif
 
 %changelog
+* Fri Sep 20 2019 RDO <dev@lists.rdoproject.org> 2.9.0-1
+- Update to 2.9.0
+
