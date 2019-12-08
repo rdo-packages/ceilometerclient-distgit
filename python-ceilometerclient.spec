@@ -14,7 +14,8 @@
 %global sname ceilometerclient
 %global sum Python API and CLI for OpenStack Ceilometer
 
-%global with_doc 1
+# oslosphinx do not work with sphinx > 2
+%global with_doc 0
 
 %global common_desc \
 This is a client library for Ceilometer built on the Ceilometer API. It \
