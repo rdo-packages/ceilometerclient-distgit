@@ -114,3 +114,4 @@ rm -fr %{buildroot}%{python3_sitelib}/%{sname}/tests
 %endif
 
 %changelog
+# REMOVEME: error caused by commit http://git.openstack.org/cgit/openstack/python-ceilometerclient/commit/?id=3ff6bac3da348bad0b220ab26eab6ad6bfbeb675
