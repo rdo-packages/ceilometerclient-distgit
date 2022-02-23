@@ -1,5 +1,5 @@
 %{!?sources_gpg: %{!?dlrn:%global sources_gpg 1} }
-%global sources_gpg_sign 0x2426b928085a020d8a90d0d879ab7008d0896c8a
+%global sources_gpg_sign 0xc96bfb160752606daa0de2fa05eb5792c876df9a
 %{!?upstream_version: %global upstream_version %{version}%{?milestone}}
 
 %global sname ceilometerclient
@@ -15,7 +15,7 @@ provides a Python API (the ceilometerclient module) and a command-line tool \
 
 Name:             python-ceilometerclient
 Version:          2.9.0
-Release:          1%{?dist}
+Release:          2%{?dist}
 Summary:          %{sum}
 
 License:          ASL 2.0
@@ -130,5 +130,8 @@ rm -fr %{buildroot}%{python3_sitelib}/%{sname}/tests
 %endif
 
 %changelog
+* Wed Feb 23 2022 Jose Castro Leon <jose.castro.leon@cern.ch> 2.9.0-2
+- Fix gpg signature
+
 * Fri Sep 20 2019 RDO <dev@lists.rdoproject.org> 2.9.0-1
 - Update to 2.9.0
