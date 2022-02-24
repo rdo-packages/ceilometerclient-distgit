@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "246db3e9_842fff11",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 128
+      },
+      "writtenOn": "2022-02-24T08:41:01Z",
+      "side": 1,
+      "message": "Squash with https://review.rdoproject.org/r/c/openstack/ceilometerclient-distgit/+/39762",
+      "revId": "76905ecaf02dc99acb19eae77dd011fa04031ebf",
+      "serverId": "270e2033-b340-4cff-9539-693957ebf0e7"
+    }
+  ]
+}
